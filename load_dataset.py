@@ -26,7 +26,7 @@ def prepare_label_emb(args, g, labels, n_classes, train_idx, valid_idx, test_idx
     print(n_classes)
     print(labels.shape[0])
     import os
-    if label_teacher_emb == None and (not os.path.exists(f'./data/papers100m_label_0.pt')):
+    if (not os.path.exists(f'./data/{args.dataset}_label_0.pt')):
         y = np.zeros(shape=(labels.shape[0], int(n_classes)))
         y[train_idx] = F.one_hot(labels[train_idx].to(
             torch.long), num_classes=n_classes).float().squeeze(1)
@@ -45,12 +45,12 @@ def prepare_label_emb(args, g, labels, n_classes, train_idx, valid_idx, test_idx
     gc.collect()
     res=[]
     import os
-    for hop in range(args.label_num_hops+args.label_start):
-        if os.path.exists(f'./data/papers100m_label_{hop}.pt'):
-            y=torch.load(f'./data/papers100m_label_{hop}.pt')
+    for hop in range(args.label_num_hops):
+        if os.path.exists(f'./data/{args.dataset}_label_{hop}.pt'):
+            y=torch.load(f'./data/{args.dataset}_label_{hop}.pt')
         else:
             y = neighbor_average_labels(g, y.to(torch.float), args)
-            torch.save(y,f'./data/papers100m_label_{hop}.pt')
+            torch.save(y,f'./data/{args.dataset}_label_{hop}.pt')
         gc.collect()
         if hop>=args.label_start:
             if args.dataset == "ogbn-mag":
@@ -63,7 +63,6 @@ def prepare_label_emb(args, g, labels, n_classes, train_idx, valid_idx, test_idx
             else:
                 new_res=y
             res.append(torch.cat([new_res[train_idx], new_res[valid_idx], new_res[test_idx]], dim=0))
-            #torch.save(res[-1],f'./data/papers100m_label_{hop}.pt')
     return res
 
 
