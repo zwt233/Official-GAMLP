@@ -340,7 +340,7 @@ def load_large_dataset(prefix):
     # ---- normalize ----
     print("normalize")
     DA,DAD=normalized_adjacency(adj_full)
-    adj = sparse_mx_to_torch_sparse_tensor(DA)
+    adj = sparse_mx_to_torch_sparse_tensor(DAD)
     feats = normalize(feats)
     feats=torch.FloatTensor(feats).float()
     print("normalize is over")

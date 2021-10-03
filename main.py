@@ -56,7 +56,8 @@ def run(args, device):
         model = gen_model(args, in_size, num_classes)
     print(model)
     model = model.to(device)
-    labels=labels.to(device)
+    if args.dataset not in ['ogbn-products']:
+        labels=labels.to(device).argmax(dim=1)
 
     print("# Params:", get_n_params(model))
     loss_fcn = nn.CrossEntropyLoss()

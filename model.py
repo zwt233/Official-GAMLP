@@ -88,7 +88,7 @@ class JK_GAMLP(nn.Module):
             for i in range(1,len(label_list)):
                 #label_list=(1-self.alpha)*label_list[i]+self.alpha*F.softmax(torch.mm(label_list[i],self.label_transform),dim=1)
                 alpha=np.cos(i*np.pi/(self.label_num_hops*2))
-                label_list[i]=(1-self.alpha)*label_list[i]+alpha*label_list[-1]
+                label_list[i]=(1-alpha)*label_list[i]+alpha*label_list[-1]
             input_list = label_list
             concat_features = torch.cat(input_list, dim=1)
             jk_ref = self.dropout(self.prelu(self.label_jk_ref(concat_features)))
@@ -198,7 +198,7 @@ class R_GAMLP(nn.Module):  # recursive GAMLP
             for i in range(len(label_list)):
 #                temp_matrix=torch.mm(label_list[-1],self.label_transform)
                 alpha=np.cos(i*np.pi/(self.label_num_hops*2))
-                label_list[i]=(1-self.alpha)*label_list[i]+alpha*label_list[-1]
+                label_list[i]=(1-alpha)*label_list[i]+alpha*label_list[-1]
             input_list = label_list
             attention_scores = []
             attention_scores.append(self.act(self.label_att(

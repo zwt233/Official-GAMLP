@@ -60,10 +60,19 @@ def run(args, device):
 
     print("# Params:", get_n_params(model))
     loss_fcn = nn.CrossEntropyLoss()
-    optimizer_sett = [
+    if args.method == 'JK_GAMLP':
+        optimizer_sett = [
         {'params': model.lr_att.parameters(), 'weight_decay': 0, 'lr': 0.0001},
         {'params': model.process.parameters(), 'weight_decay': 0, 'lr': 0.0001},
         {'params': model.lr_jk_ref.parameters(), 'weight_decay': 0, 'lr': 0.0001}, 
+        {'params': model.lr_output.parameters(), 'weight_decay': 0, 'lr': 0.0001},
+        {'params': model.label_att.parameters(), 'weight_decay': 0, 'lr': 1e-4},
+        {'params': model.label_output.parameters(), 'weight_decay': 0, 'lr': 1e-4},
+        ]
+    else:
+        optimizer_sett = [
+        {'params': model.lr_att.parameters(), 'weight_decay': 0, 'lr': 0.0001},
+        {'params': model.process.parameters(), 'weight_decay': 0, 'lr': 0.0001},
         {'params': model.lr_output.parameters(), 'weight_decay': 0, 'lr': 0.0001},
         {'params': model.label_att.parameters(), 'weight_decay': 0, 'lr': 1e-4},
         {'params': model.label_output.parameters(), 'weight_decay': 0, 'lr': 1e-4},
