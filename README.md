@@ -49,10 +49,12 @@ python main.py --dataset flickr --method JK_GAMLP --dropout 0.7 --input-drop 0 -
 ##### Test 5403
 
 ```
-python main.py --dataset flickr --method R_GAMLP --dropout 0.7 --input-drop 0 --att-drop 0 --act leaky_relu --batch 250 --label-num-hops 10 --num-hops 10 --epochs 50 --n-layers-1 2 --n-layers-2 2 --n-layers-3 2 --n-layers-4 2 --lr 0.0001 --weight-decay 0 --hidden 512 --patience 100 --seed 42 --pre-process --use-label --label-drop 0.5 --label-num-hops 5 --num-runs 1
+python main.py --dataset flickr --method R_GAMLP --dropout 0.5 --input-drop 0 --att-drop 0 --act leaky_relu --batch 250 --label-num-hops 10 --num-hops 10 --epochs 50 --n-layers-1 2 --n-layers-2 2 --n-layers-3 2 --n-layers-4 2 --lr 0.0001 --weight-decay 0 --hidden 512 --patience 100 --seed 42 --pre-process --use-label --label-drop 0.5 --label-num-hops 5 --num-runs 1
 ```
 
+##### Validation 5267
 
+##### Test 5312
 
 ### ogbn-products
 
@@ -104,15 +106,15 @@ python main_papers.py --method JK_GAMLP --epochs 400 --train-epochs 0 --dataset 
 ###### seed 1 7190 6792
 ###### seed 2 7197 6807
 
-###### seed 3 7176 6795	
-
-###### seed 4 7188 6810
-
 ```
 python main_papers.py --method R_GAMLP --epochs 400 --train-epochs 0 --dataset ogbn-papers100M --eval-every 1 --act sigmoid --batch 5000 --eval-batch 50000 --patience 60 --n-layers-1 4 --n-layers-2 6  --num-hops 12 --input-drop 0 --att-drop 0.5 --pre-process --hidden 1280 --lr 0.001 --root /data2/zwt/ --use-label --label-num-hops 9 --label-drop 0.3
 ```
 
+###### seed 0 7118 6744
 
+###### seed 1 7126 6748
+
+###### seed 2 7119 6748
 
 ### Dataset resources
 
