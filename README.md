@@ -101,20 +101,9 @@ python main_papers.py --method JK_GAMLP --epochs 400 --train-epochs 0 --dataset 
 
 ##### Params: 67560875
 
-###### seed 0 7188 6815
-
-###### seed 1 7190 6792
-###### seed 2 7197 6807
-
 ```
 python main_papers.py --method R_GAMLP --epochs 400 --train-epochs 0 --dataset ogbn-papers100M --eval-every 1 --act sigmoid --batch 5000 --eval-batch 50000 --patience 60 --n-layers-1 4 --n-layers-2 6  --num-hops 12 --input-drop 0 --att-drop 0.5 --pre-process --hidden 1280 --lr 0.001 --root /data2/zwt/ --use-label --label-num-hops 9 --label-drop 0.3
 ```
-
-###### seed 0 7118 6744
-
-###### seed 1 7126 6748
-
-###### seed 2 7119 6748
 
 ### Dataset resources
 
