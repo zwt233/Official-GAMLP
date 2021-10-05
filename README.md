@@ -117,8 +117,12 @@ python main_papers.py --method R_GAMLP --epochs 400 --train-epochs 0 --dataset o
 
 - Accuracy comparison:
 
-![image] (https://github.com/zwt233/ICLR-GAMLP/blob/main/Table1.png)
-
-![image] (https://github.com/zwt233/ICLR-GAMLP/blob/main/Table2.png)
-
-![image] (https://github.com/zwt233/ICLR-GAMLP/blob/main/Table3.png)
+  <img src="Table1.png" width="80%" height="80%">
+  <img src="Table2.png" width="80%" height="80%">
+  <img src="Table3.png" width="80%" height="80%">
+  
+- Efficiency comparision
+  <img src="Table4.png" width="80%" height="80%">
+  
+- Albation study
+  <img src="Table5.png" width="80%" height="80%">
