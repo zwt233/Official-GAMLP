@@ -12,7 +12,7 @@ pip install -r requirements.txt
 
 ## Training
 
-##### PPI
+### PPI
 
 ```
 cd ./ppi
@@ -61,7 +61,7 @@ python main.py --use-label --method R_GAMLP --epochs 400 --train-epochs 0 --data
 python main.py --use-label --method JK_GAMLP --epochs 400 --train-epochs 0 --dataset ogbn-products --eval-every 10 --act leaky_relu --batch 50000 --eval-batch 500000 --patience 300 --n-layers-1 2 --n-layers-2 4 --n-layers-3 2 --n-layers-4 4 --num-hops 5 --label-num-hops 10 --input-drop 0.3 --att-drop 0.5 --label-drop 0 --pre-process --residual
 ```
 
-#### ogbn-100Mpapers
+### ogbn-papers100M
 
 ```
 python main_papers.py --method JK_GAMLP --epochs 400 --train-epochs 0 --dataset ogbn-papers100M --eval-every 1 --act sigmoid --batch 5000 --eval-batch 50000 --patience 60 --n-layers-1 4 --n-layers-2 6  --num-hops 12 --input-drop 0 --att-drop 0.5 --pre-process --hidden 1280 --lr 0.001 --root /data2/zwt/ --use-label --label-num-hops 9 --label-drop 0.3
@@ -76,6 +76,8 @@ python main_papers.py --method R_GAMLP --epochs 400 --train-epochs 0 --dataset o
 ##### the PPI dataset can get from http://snap.stanford.edu/graphsage/#datasets
 
 ##### the other datasets can get from https://github.com/GraphSAINT/GraphSAINT
+
+##### the ogb datasets can get from https://ogb.stanford.edu/
 
 ### Results
 
