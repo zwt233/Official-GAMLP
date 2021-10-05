@@ -117,8 +117,8 @@ python main_papers.py --method R_GAMLP --epochs 400 --train-epochs 0 --dataset o
 
 - Accuracy comparison:
 
-! [image] (https://github.com/zwt233/ICLR-GAMLP/blob/main/Table1.png)
+![image] (https://github.com/zwt233/ICLR-GAMLP/blob/main/Table1.png)
 
-! [image] (https://github.com/zwt233/ICLR-GAMLP/blob/main/Table2.png)
+![image] (https://github.com/zwt233/ICLR-GAMLP/blob/main/Table2.png)
 
-! [image] (https://github.com/zwt233/ICLR-GAMLP/blob/main/Table3.png)
+![image] (https://github.com/zwt233/ICLR-GAMLP/blob/main/Table3.png)
