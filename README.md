@@ -111,3 +111,14 @@ python main_papers.py --method R_GAMLP --epochs 400 --train-epochs 0 --dataset o
 
 ##### the other datasets can get from https://github.com/GraphSAINT/GraphSAINT
 
+
+
+### Results
+
+- Accuracy comparison:
+
+! [image] (https://github.com/zwt233/ICLR-GAMLP/Table1.png)
+
+! [image] (https://github.com/zwt233/ICLR-GAMLP/Table2.png)
+
+! [image] (https://github.com/zwt233/ICLR-GAMLP/Table3.png)
