@@ -5,6 +5,6 @@ the preprocess is adapted from https://github.com/facebookresearch/NARS, you can
 #### run
 
 ```
-bash mag_gmlp.sh
+bash train_graph_emb.sh
 ```
 

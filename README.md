@@ -43,6 +43,11 @@ python main.py --dataset flickr --method JK_GAMLP --dropout 0.7 --input-drop 0 -
 ```
 python main.py --dataset flickr --method R_GAMLP --dropout 0.5 --input-drop 0 --att-drop 0 --act leaky_relu --batch 250 --label-num-hops 10 --num-hops 10 --epochs 50 --n-layers-1 2 --n-layers-2 2 --n-layers-3 2 --n-layers-4 2 --lr 0.0001 --weight-decay 0 --hidden 512 --patience 100 --seed 42 --pre-process --use-label --label-drop 0.5 --label-num-hops 5 --num-runs 1
 ```
+### ogbn-mag
+
+```
+python main.py --method JK_GAMLP --stages 500 --train-num-epochs 0 --input-drop 0.3 --att-drop 0 --label-drop 0 --pre-process --dataset ogbn-mag --num-runs 10 --eval 10 --act leaky_relu --batch 10000 --patience 300 --n-layers-1 4 --n-layers-2 6 --label-num-hops 3 --bns --use-relation-subsets ./data/mag --emb_path /data2/zwt/ --root /data2/zwt/
+```
 
 ### ogbn-products
 
