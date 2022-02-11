@@ -88,7 +88,7 @@ python main_papers.py --method R_GAMLP --epochs 400 --train-epochs 0 --dataset o
 
 ##### The OGB datasets can be fetched from https://ogb.stanford.edu/.
 
-##### All the other datasets can be fetched from https://github.com/GraphSAINT/GraphSAINT.
+##### The other datasets can be fetched from https://github.com/GraphSAINT/GraphSAINT.
 
 ### Results
 
