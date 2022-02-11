@@ -96,6 +96,6 @@ python main_papers.py --method R_GAMLP --epochs 400 --train-epochs 0 --dataset o
 - Efficiency comparision
 
   <img src="Table5.png" width="100%" height="80%">
-- Albation study
+- Ablation study
 
   <img src="Table6.png" width="80%" height="100%">
