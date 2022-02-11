@@ -5,3 +5,4 @@ scipy==1.2.1
 torch==1.7.1
 dglke==0.1.0
 dgl-cu101==0.4.3.post2
+ogb==1.2.1
