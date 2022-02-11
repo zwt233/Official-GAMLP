@@ -75,20 +75,20 @@ python preprocess_papers100m.py --num_hops 12 --root ./
 
 
 ```
-python main_papers.py --method JK_GAMLP --epochs 400 --train-epochs 0 --dataset ogbn-papers100M --eval-every 1 --act sigmoid --batch 5000 --eval-batch 50000 --patience 60 --n-layers-1 4 --n-layers-2 6  --num-hops 12 --input-drop 0 --att-drop 0.5 --pre-process --hidden 1280 --lr 0.001 --root /data2/zwt/ --use-label --label-num-hops 9 --label-drop 0.3 --gpu 0
+python main_papers.py --method JK_GAMLP --epochs 400 --train-epochs 0 --dataset ogbn-papers100M --eval-every 1 --act sigmoid --batch 5000 --eval-batch 50000 --patience 60 --n-layers-1 4 --n-layers-2 6  --num-hops 12 --input-drop 0 --att-drop 0.5 --pre-process --hidden 1280 --lr 0.001 --root ./ --use-label --label-num-hops 9 --label-drop 0.3 --gpu 0
 ```
 
 ```
-python main_papers.py --method R_GAMLP --epochs 400 --train-epochs 0 --dataset ogbn-papers100M --eval-every 1 --act sigmoid --batch 5000 --eval-batch 50000 --patience 60 --n-layers-1 4 --n-layers-2 6  --num-hops 12 --input-drop 0 --att-drop 0.5 --pre-process --hidden 1280 --lr 0.001 --root /data2/zwt/ --use-label --label-num-hops 9 --label-drop 0.3 --gpu 0
+python main_papers.py --method R_GAMLP --epochs 400 --train-epochs 0 --dataset ogbn-papers100M --eval-every 1 --act sigmoid --batch 5000 --eval-batch 50000 --patience 60 --n-layers-1 4 --n-layers-2 6  --num-hops 12 --input-drop 0 --att-drop 0.5 --pre-process --hidden 1280 --lr 0.001 --root ./ --use-label --label-num-hops 9 --label-drop 0.3 --gpu 0
 ```
 
 ### Dataset resources
 
-##### the PPI dataset can get from http://snap.stanford.edu/graphsage/#datasets
+##### The PPI dataset can be fetched from http://snap.stanford.edu/graphsage/#datasets.
 
-##### the other datasets can get from https://github.com/GraphSAINT/GraphSAINT
+##### The OGB datasets can be fetched from https://ogb.stanford.edu/.
 
-##### the ogb datasets can get from https://ogb.stanford.edu/
+##### All the other datasets can be fetched from https://github.com/GraphSAINT/GraphSAINT.
 
 ### Results
 
